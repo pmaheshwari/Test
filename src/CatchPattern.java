@@ -1,7 +1,9 @@
+import java.util.HashSet;
+import java.util.Set;
 
 public class CatchPattern {
 
-	private static final String findPatternIn = "abcabcd";
+	private static final String findPatternIn = "abc  abc  ";
 
 	public static void main(String[] args) {
 
@@ -24,11 +26,10 @@ public class CatchPattern {
 				}
 			}
 			
-				pattern =  findPattern(findPatternIn.substring(1)+ pattern +  " " );
+				pattern = pattern +  " " + findPattern(findPatternIn.substring(1));
 
 			
 		}
-
 		return pattern;
 	}
 }

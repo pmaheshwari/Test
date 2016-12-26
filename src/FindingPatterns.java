@@ -1,6 +1,6 @@
 
 public class FindingPatterns {
-	private static final String myString = "abbccaabbcc";
+	private static final String myString = "aabaab";
 
 	public static void main(String[] args) {
 		String pattern = "";
@@ -32,12 +32,16 @@ public class FindingPatterns {
 		}
 		if (index != -1 && pattern.equals("")) {
 			pattern = str.substring(0, index + 1);
+			
+		}
+		if(pattern.length() == 0){
+			return hasPattern;
 		}
 		if (str.length() % pattern.length() == 0) {
 			hasPattern = str.substring(index + 1).contains(pattern);
 			int newIndex = pattern.length();
 			String newString = str.substring(newIndex);
-			if (newString != null && !newString.trim().equals("")) {
+			if (newString != null && !newString.equals("")) {
 				hasPattern = findPattern(newString, pattern, index);
 
 			}

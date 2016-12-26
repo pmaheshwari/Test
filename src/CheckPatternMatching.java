@@ -36,7 +36,7 @@ public class CheckPatternMatching {
 	}
 
 	public static void main(String[] args) {
-		String s = "abaaba";
+		String s = "ijklmniijklmni";
 		CheckPatternMatching patternMatching = new CheckPatternMatching();
 		System.out.println("String pattern to match : " + s);
 		System.out.println("Pattern matched : "
